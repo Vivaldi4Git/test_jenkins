@@ -1,9 +1,22 @@
 pipeline {
-    agent { docker 'python:3.5.1' }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'python --version'
+                echo 'Building...'
+                // 添加你的构建步骤
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // 添加你的测试步骤
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // 添加你的部署步骤
             }
         }
     }
